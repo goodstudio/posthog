@@ -299,6 +299,7 @@ export enum AccessControlResourceType {
     Insight = 'insight',
     Dashboard = 'dashboard',
     Notebook = 'notebook',
+    SessionRecording = 'session_recording',
 }
 
 interface UserBaseType {
@@ -3162,7 +3163,7 @@ export interface ConsolidatedSurveyResults {
  *   ["7", ["Tutorials", "Other"], "Good but could improve", "user456"]
  * ]
  */
-export type SurveyResponseRow = Array<string | string[]>
+export type SurveyResponseRow = Array<null | string | string[]>
 export type SurveyRawResults = SurveyResponseRow[]
 
 export interface Survey {
